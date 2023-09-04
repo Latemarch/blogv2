@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  @apply font-albert text-gray-800 bg-white;
-}
 h1 {
   @apply font-bold text-5xl;
 }

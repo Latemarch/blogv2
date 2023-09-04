@@ -1,3 +1,4 @@
+import NextThemeProvider from "@/context/NextThemeProvider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Albert_Sans, Alkatra } from "next/font/google";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   applicationName: "Latemarch - blog",
   keywords: ["Next.js", "blog", "기술 블로그", "자바스크립트", "latemarch"],
   authors: { name: "Latemarch", url: "jjh@catholic.ac.kr" },
-  colorScheme: "dark",
+  // colorScheme: "dark",
   creator: "Latemarch",
   publisher: "Latemarch",
   formatDetection: {
@@ -38,11 +39,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${albert.variable} ${alkatra.variable}`}
-    >
-      <body>{children}</body>
+    <html lang="en">
+      <NextThemeProvider>
+        <body
+          className={`${inter.variable} ${albert.variable} ${alkatra.variable} `}
+        >
+          <div className="bg-white dark:bg-red-200">{children}</div>
+        </body>
+      </NextThemeProvider>
     </html>
   );
 }
