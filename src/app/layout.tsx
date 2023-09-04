@@ -1,8 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Albert_Sans, Alkatra } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const albert = Albert_Sans({ subsets: ["latin"], variable: "--font-albert" });
+const alkatra = Alkatra({ subsets: ["latin"], variable: "--font-alkatra" });
 
 export const metadata: Metadata = {
   generator: "Next.js",
@@ -36,8 +38,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${inter.variable} ${albert.variable} ${alkatra.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }
