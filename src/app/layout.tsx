@@ -1,4 +1,4 @@
-import NextThemeProvider from "@/context/NextThemeProvider";
+import NextThemeProvider from "@/contexts/NextThemeProvider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter, Albert_Sans, Alkatra } from "next/font/google";
