@@ -1,5 +1,5 @@
+import MDXComponent from "@/components/MDXComponent";
 import ThemeSwitch from "@/components/ThemeSwitch";
-import ThemeWatcher from "@/components/ThemeWatcher";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <span>font TEST 입니다.</span>
       <p className="font-lbert">home</p>
       <ThemeSwitch />
-      <ThemeWatcher />
+      <MDXComponent />
     </main>
   );
 }
