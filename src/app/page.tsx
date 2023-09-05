@@ -1,4 +1,3 @@
-import MDXComponent from "@/components/MDXComponent";
 import ThemeSwitch from "@/components/ThemeSwitch";
 
 export default function Home() {
@@ -12,7 +11,6 @@ export default function Home() {
       <span>font TEST 입니다.</span>
       <p className="font-lbert">home</p>
       <ThemeSwitch />
-      <MDXComponent />
     </main>
   );
 }
